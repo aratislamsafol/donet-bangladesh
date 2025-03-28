@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Daisy UI + Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="src/input.css">
+    <title>Home</title>
+</head>
+
+<body class="regular-font flex flex-col items-center"> 
+    <header class="max-w-[1200px] w-full">
+        <nav
+            class="grid grid-cols-2 md:grid-cols-3 items-center justify-between bg-orange-50 py-2 md:py-4 lg:py-6 px-2 md:px-3 lg:px-4">
+            <!-- blog -->
+            <div class="hidden md:flex">
+                <a class="bg-green-500 rounded font-medium md:font-semibold text-sm md:text-xl text-gray-100 w-20 text-center py-2"
+                    href="">Blog</a>
+            </div>
+            <!-- logo -->
+            <div class="inline-flex items-center gap-2 md:gap-3">
+                <img src="assets/logo.png" class="w-8" alt="logo">
+                <span class="font-semibold text-base md:text-xl whitespace-nowrap">Donate Bangladesh</span>
+            </div>
+            <!-- amount -->
+            <div class="hidden md:flex gap-1 items-center justify-end">
+                <img src="assets/coin.png" class="w-5" alt="">
+                <h3 class="whitespace-nowrap">5500 BDT</h3>
+            </div>
+            <!-- mobile humbergur -->
+            <div class="flex items-center justify-end parent-humburger justify-self-end md:hidden">
+                <p class="humburger"></p>
+            </div>
+        </nav>
+        <!-- mobile menu Item -->
+        <div id="menu" class="flex items-center justify-between px-2 bg-orange-50 pt-2 md:hidden">
+            <!-- blog button -->
+            <a class="bg-green-500 rounded font-medium md:font-semibold text-sm md:text-xl text-gray-100 w-20 text-center py-2"
+                href="">Blog</a>
+            <!-- amount  -->
+            <div class="flex gap-1 items-center">
+                <img src="assets/coin.png" class="w-5" alt="">
+                <h3 class="whitespace-nowrap">5500 BDT</h3>
+            </div>
+        </div>
+        <!-- button section -->
+        <div class="join gap-2 justify-center w-full mt-4 md:mt-10">
+            <button type="button" class="btn join-item active:bg-green-500
+            ">Donation</button>
+            <button type="button" class="btn join-item">History</button>
+        </div>
+    </header>
+
+    <main class="max-w-[1200px] w-full">
+        <!-- card -->
+        <div class="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 hover:border-slate-300 hover:shadow-md rounded-lg transition-all cursor-pointer w-full">
+            <div class="p-4">
+              <h5 class="mb-2 text-slate-800 text-md md:text-xl font-semibold">
+                96500 Taka is Donated for famine-2024 at Feni, Bangladesh
+              </h5>
+              <p class="text-slate-600 leading-normal font-light text-sm md:text-base">
+                Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)
+              </p>
+            </div>
+          </div>
+
+          <!-- card -->
+        <div class="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 hover:border-slate-300 hover:shadow-md rounded-lg transition-all cursor-pointer w-full">
+            <div class="p-4">
+              <h5 class="mb-2 text-slate-800 text-md md:text-xl font-semibold">
+                96500 Taka is Donated for famine-2024 at Feni, Bangladesh
+              </h5>
+              <p class="text-slate-600 leading-normal font-light text-sm md:text-base">
+                Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)
+              </p>
+            </div>
+          </div>
+
+          <!-- card -->
+        <div class="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 hover:border-slate-300 hover:shadow-md rounded-lg transition-all cursor-pointer w-full">
+            <div class="p-4">
+              <h5 class="mb-2 text-slate-800 text-md md:text-xl font-semibold">
+                96500 Taka is Donated for famine-2024 at Feni, Bangladesh
+              </h5>
+              <p class="text-slate-600 leading-normal font-light text-sm md:text-base">
+                Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)
+              </p>
+            </div>
+          </div>
+    </main>
+    <script src="src/js/utilities/utilities.js"></script>
+    <script src="src/js/script.js"></script>
+</body>
+
+</html>
