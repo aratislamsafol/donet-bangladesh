@@ -3,3 +3,27 @@
 .regular-font {
     font-family: "Lexend", sans-serif;
 }
+.parent-humburger{
+    width: 18px;
+    height: 14px;
+    cursor: pointer;
+}
+.humburger{
+    height: 1px;
+    width: 18px;
+    background-color: black;
+    position: relative;
+}
+.humburger:before, .humburger:after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+.humburger:before{
+    top: -6px;
+}
+.humburger:after{
+    top: 6px;
+}

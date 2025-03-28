@@ -11,6 +11,39 @@
     <title>Home</title>
 </head>
 <body class="regular-font">
-    
+    <header class="">
+        <nav class="grid grid-cols-2 md:grid-cols-3 items-center justify-between bg-orange-50 py-2 md:py-4 lg:py-6 px-2 md:px-3 lg:px-4">
+            <!-- blog -->
+            <div class="hidden md:flex">
+                <a class="bg-green-500 rounded font-medium md:font-semibold text-sm md:text-xl text-gray-100 w-20 text-center py-2" href="">Blog</a>
+            </div>
+            <!-- logo -->
+             <div class="inline-flex items-center gap-2 md:gap-3">
+                <img src="assets/logo.png" class="w-8" alt="logo">
+                <span class="font-semibold text-base md:text-xl whitespace-nowrap">Donate Bangladesh</span>
+             </div>
+             <!-- amount -->
+             <div class="hidden md:flex gap-1 items-center justify-end">
+                <img src="assets/coin.png" class="w-5" alt="">
+                <h3 class="whitespace-nowrap">5500 BDT</h3>
+            </div>
+             <!-- mobile humbergur -->
+             <div class="flex items-center justify-end parent-humburger justify-self-end md:hidden">
+                <p class="humburger"></p>
+             </div>
+        </nav>
+        <!-- mobile menu Item -->
+         <div id="menu" class="flex items-center justify-between px-2 bg-orange-50 pt-2 md:hidden">
+           <!-- blog button -->
+            <a class="bg-green-500 rounded font-medium md:font-semibold text-sm md:text-xl text-gray-100 w-20 text-center py-2" href="">Blog</a>
+           <!-- amount  -->
+            <div class="flex gap-1 items-center">
+                <img src="assets/coin.png" class="w-5" alt="">
+                <h3 class="whitespace-nowrap">5500 BDT</h3>
+            </div>
+         </div>
+    </header>
+    <script src="src/js/utilities/utilities.js"></script>
+    <script src="src/js/script.js"></script>
 </body>
 </html>
