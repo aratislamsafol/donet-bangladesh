@@ -12,23 +12,34 @@ for (let data of getInputClass('donetBtn')) {
             return; 
         }
 
-        // specific Donet Calculation
-        let specificItemDonet = data.parentNode.children[0].children[1].querySelector('.donateAmount').innerText;
-        let newSpecificDonet = parseInt(specificItemDonet) + parseInt(inputValue);
-        data.parentNode.children[0].children[1].querySelector('.donateAmount').innerText = newSpecificDonet;
-
         // Donet Money & Remove from Main Balance
         let balance = parseInt(getInputId('userBlance').innerText) - parseInt(inputValue);
-        getInputId('userBlance').innerText = balance;
-        getInputId('userBlance2').innerText = balance;
+        let specificItemDonet = data.parentNode.children[0].children[1].querySelector('.donateAmount').innerText;
+        if(balance > 0 ){
+        let newSpecificDonet = parseInt(specificItemDonet) + parseInt(inputValue);
+        data.parentNode.children[0].children[1].querySelector('.donateAmount').innerText = newSpecificDonet;
+            getInputId('userBlance').innerText = balance;
+            getInputId('userBlance2').innerText = balance;
+        }else{
+            alert('You dont add extra money');
+            data.firstElementChild.value = "";
+            return;
+        }
+        
 
         data.firstElementChild.value = "";
     });
 }
 
-// transition
-
-
+// mobile menu
+document.getElementById('humburgerId').addEventListener('click', function(){
+    if(document.getElementById('menu').classList.contains('hidden')){
+        document.getElementById('menu').classList.add('flex');
+        document.getElementById('menu').classList.remove('hidden');
+    }else{
+        document.getElementById('menu').classList.add('hidden');
+    }
+});
 
 
 // toggle 

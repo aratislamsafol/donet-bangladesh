@@ -20,3 +20,5 @@ function transitionItem(id, inputAmount){
         </div>
     `;
 }
+
+
