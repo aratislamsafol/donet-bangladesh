@@ -1,17 +1,35 @@
 // donation
-for(let data of getInputClass('donetBtn')){
-    data.lastElementChild.addEventListener('click', function(event){
+for (let data of getInputClass('donetBtn')) {
+    data.lastElementChild.addEventListener('click', function (event) {
         event.preventDefault();
-        
-        // specific Donet Calculaton
+
+        let inputValue = data.firstElementChild.value;
+
+        if (isNaN(inputValue) || inputValue.trim() === "") {
+            alert("Please enter a valid number!");
+            return; 
+        }
+
+        // specific Donet Calculation
         let specificItemDonet = data.parentNode.children[0].children[1].querySelector('.donateAmount').innerText;
-        let newSpecificDonet = parseInt(specificItemDonet) +  parseInt(data.firstElementChild.value);
+        let newSpecificDonet = parseInt(specificItemDonet) + parseInt(inputValue);
         data.parentNode.children[0].children[1].querySelector('.donateAmount').innerText = newSpecificDonet;
 
         // Donet Money & Remove from Main Balance
-        let balance = parseInt(getInputId('userBlance').innerText) - data.firstElementChild.value;
+        let balance = parseInt(getInputId('userBlance').innerText) - parseInt(inputValue);
         getInputId('userBlance').innerText = balance;
+        getInputId('userBlance2').innerText = balance;
 
-        data.firstElementChild.value = ""
-    })
+        // ইনপুট ফাঁকা করে দেওয়া
+        data.firstElementChild.value = "";
+    });
 }
+
+// toggle 
+getInputId('donation').addEventListener('click', function(){
+    toggle('donationBody');
+});
+
+getInputId('transition').addEventListener('click', function(){
+    toggle('transitionBody');
+});

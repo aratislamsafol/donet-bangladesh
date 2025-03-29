@@ -29,7 +29,7 @@
             <!-- amount -->
             <div class="hidden md:flex gap-1 items-center justify-end">
                 <img src="assets/coin.png" class="w-5" alt="">
-                <h3 class="whitespace-nowrap">5500 BDT</h3>
+                <h3 class="whitespace-nowrap" id="userBlance2">5500 BDT</h3>
             </div>
             <!-- mobile humbergur -->
             <div class="flex items-center justify-end parent-humburger justify-self-end md:hidden">
@@ -49,15 +49,15 @@
         </div>
         <!-- button section -->
         <div class="join gap-2 justify-center w-full mt-4 md:mt-10">
-            <button type="button" class="btn join-item active:bg-green-500
+            <button type="button" id="donation" class="btn join-item active:bg-green-500
             ">Donation</button>
-            <button type="button" class="btn join-item">History</button>
+            <button type="button" id="transition" class="btn join-item">History</button>
         </div>
     </header>
 
-    <main class="max-w-[1140px] z-1">
+    <main class="max-w-[1140px] z-1  w-full">
         <!-- donation section -->
-        <div>
+        <div class="" id="donationBody">
             <!-- card -->
             <div
                 class="relative flex flex-col md:flex-row w-full my-6 bg-white shadow-sm border border-slate-200 rounded-lg">
@@ -85,7 +85,7 @@
                     </p>
                     <!-- donatin form -->
                     <form action="" class="donetBtn">
-                        <input type="text" 
+                        <input type="number" 
                             class="w-full rounded-md outline-none px-2 py-3 text-gray-600 border-gray-400 placeholder-gray-400"
                             placeholder="Write Donation Amount">
 
@@ -124,7 +124,7 @@
                     </p>
                     <!-- donatin form -->
                     <form action="" class="donetBtn">
-                        <input type="text" 
+                        <input type="number" 
                             class="w-full rounded-md outline-none px-2 py-3 text-gray-600 border-gray-400 placeholder-gray-400"
                             placeholder="Write Donation Amount">
 
@@ -161,7 +161,7 @@
                     </p>
                     <!-- donatin form -->
                     <form action="" class="donetBtn">
-                        <input type="text" 
+                        <input type="number" 
                             class="w-full rounded-md outline-none px-2 py-3 text-gray-600 border-gray-400 placeholder-gray-400"
                             placeholder="Write Donation Amount">
 
@@ -175,7 +175,7 @@
             </div>
         </div>
         <!-- transition section -->
-        <div class="hidden">
+        <div class="hidden" id="transitionBody">
             <!-- card -->
             <div
                 class="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 hover:border-slate-300 hover:shadow-md rounded-lg transition-all cursor-pointer w-full">
@@ -217,7 +217,7 @@
         </div>
 
     </main>
-
+    <script src="src/js/utilities/toggle.js"></script>
     <script src="src/js/utilities/utilities.js"></script>
     <script src="src/js/script.js"></script>
 </body>
