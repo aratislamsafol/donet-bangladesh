@@ -44,9 +44,9 @@ document.getElementById('humburgerId').addEventListener('click', function(){
 
 // toggle 
 getInputId('donation').addEventListener('click', function(){
-    toggle('donationBody');
+    toggle('donationBody', 'donation');
 });
 
 getInputId('transition').addEventListener('click', function(){
-    toggle('transitionBody');
+    toggle('transitionBody', 'transition');
 });
